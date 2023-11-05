@@ -1,0 +1,111 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Avenir", sans-serif;
+}
+/* body {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: center;
+  min-height: 100vh;
+} */
+.wrapper-2 {
+  width: 600px;
+  background: #f1f1f1; /* updated color */
+  border-radius: 10px;
+  padding: 20px;
+  /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); */
+}
+.wrapper-2 header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+}
+header .month-navigation {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+header .prev-next-month {
+  cursor: pointer;
+  font-weight: 500;
+  user-select: none;
+  color: #878787;
+  font-size: 1.2rem;
+}
+header .prev-next-month:hover {
+  text-decoration: underline;
+}
+header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar-1 {
+  padding: 20px;
+}
+.calendar-1 ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar-1 .days {
+  margin-bottom: 20px;
+}
+.calendar-1 li {
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar-1 .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+.calendar-1 .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive {
+  color: #aaa;
+}
+.days li.active {
+  color: #000;
+}
+/* .days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before {
+  background: #9b59b6;
+}
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+} */
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px; /* changed height */
+  width: 70px; /* changed width */
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before {
+  background: #c1c1c1;
+}
